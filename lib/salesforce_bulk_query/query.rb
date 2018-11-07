@@ -115,7 +115,7 @@ module SalesforceBulkQuery
 
         # delete files associated with batches that failed verification
         verification_fail_batches.each do |b|
-          @logger.info "Deleting #{b.filename}, verification failed."
+          @logger.info "Deleting #{b.filename}, verification failed." if @logger
           File.delete(b.filename)
         end
 

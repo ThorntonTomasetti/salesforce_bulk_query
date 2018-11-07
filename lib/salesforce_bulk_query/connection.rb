@@ -31,7 +31,7 @@ module SalesforceBulkQuery
       begin
         parsed = XmlSimple.xml_in(xml)
       rescue => e
-        @logger.error "Error parsing xml: #{xml}\n#{e}\n#{e.backtrace}"
+        @logger.error "Error parsing xml: #{xml}\n#{e}\n#{e.backtrace}" if @logger
         raise
       end
 
