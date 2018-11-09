@@ -82,7 +82,7 @@ module SalesforceBulkQuery
         end
 
         @logger.info "Sleeping #{check_interval}" if @logger
-        @logger.info "Downloaded files: #{results[:filenames].length} Jobs in progress: #{query.jobs_in_progress.length}"
+        @logger.info "Downloaded files: #{results[:filenames].length} Jobs in progress: #{query.jobs_in_progress.length}" if @logger
         sleep(check_interval)
       end
 
